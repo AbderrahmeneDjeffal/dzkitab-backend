@@ -35,15 +35,14 @@ import { AuthModule } from "./modules/shared/auth/auth.module";
                         password: db.password,
                         database: db.database,
                         autoLoadEntities: true,
-                        synchronize: process.env.DB_SYNC === "true",
-                    };
+                        synchronize: true,                    };
                 }
 
                 return {
                     type: "postgres",
                     url: db.uri,
                     autoLoadEntities: true,
-                    synchronize: false,
+                    synchronize: true,
                 };
             },
         }),
